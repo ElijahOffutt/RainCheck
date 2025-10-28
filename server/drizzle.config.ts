@@ -1,10 +1,13 @@
-import { defineConfig } from 'drizzle-kit';
+// drizzle.config.ts
+import { defineConfig } from "drizzle-kit";
 
+// Export configuration for Drizzle CLI & Studio
 export default defineConfig({
-    schema: './src/services/drizzle/schema.ts',
-    out: './drizzle',
-    dialect: 'sqlite',
+    schema: "./db/schema.ts",      // Path to your schema
+    out: "./drizzle",               // Directory for generated migrations
+    dialect: "sqlite",              // Use SQLite dialect
     dbCredentials: {
-        url: "file:./src/db/db.sqlite"
+        // The local SQLite database file to connect to
+        url: "file:./db/db.sqlite",
     },
 });
