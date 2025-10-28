@@ -1,10 +1,11 @@
 import { Hono } from 'hono'
+import users from './routes/user'
 
 const app = new Hono()
 
 app.get('/', async c => c.text('Hello Hono!'))
 
-import users from './routes/user'
+// CONFIGURE ROUTES
 app.route('/users', users)
 
 export default app

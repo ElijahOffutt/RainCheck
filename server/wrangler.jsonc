@@ -21,11 +21,12 @@
   //     "bucket_name": "my-bucket"
   //   }
   // ],
-  "d1_databases": [
+  "d1_databases": [ // <== 
     {
-      "binding": "DB",
-      "database_name": "RainCheck",
-      "database_id": "MyDataBaseID" // <== ARBITRARY IN DEVELOPMENT 
+      "binding": "DB", // <== REFERENCE NAME ON .ENV
+      "database_name": "RainCheck", // <== DB NAME (IN CLOUDFLARE)
+      "database_id": "MyDataBaseID", // <== DB ID (ARBITRARY IN DEVELOPMENT)
+      "migrations_dir": "./drizzle", // <== LOCATION OF DRIZZLE DIRECTORY
     }
   ],
   // "ai": {
